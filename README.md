@@ -1,3 +1,4 @@
+<!-- DO NOT REMOVE - contributor_list:data:start:["Matt-Gleich", "vincentdoerig"]:end -->
 # hacklang
 
 A programming language created for and by hackclubbers.
@@ -15,3 +16,13 @@ A programming language created for and by hackclubbers.
 | `zrl` (Zach Latta)           | `constructor`              |
 | `josh` (Josh Brown)          | `import`                   |
 | `vincent` (Vincent Doerig)   | `return`                   |
+
+<!-- DO NOT REMOVE - contributor_list:start -->
+## 👥 Contributors
+
+
+- **[@Matt-Gleich](https://github.com/Matt-Gleich)**
+
+- **[@vincentdoerig](https://github.com/vincentdoerig)**
+
+<!-- DO NOT REMOVE - contributor_list:end -->
