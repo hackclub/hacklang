@@ -20,4 +20,4 @@ A programming language created for and by hackclubbers. Basically javascript but
 | `kayley` ([Kayley Seow](https://github.com/kayleyseow))            | `else`                    |
 | `breadduck` (Kate)                                                 | `await`                   |
 | `lachlanjc` ([Lachlan Campbell](https://github.com/lachlanjc))     | `async`                   |
-| `neel` ([Neel Redkar](https://github.com/neelr))                   | `export`                  |
+| `chalk` ([Isac Portillo](https://github.com/ChalkHuman))           | `export`                  |
