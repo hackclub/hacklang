@@ -2,7 +2,7 @@
 
 A programming language created for and by hackclubbers.
 
-| **hacklang keyword**         | **Javascript Equivalent ** |
+| **hacklang keyword**         | **Javascript Equivalent**  |
 | ---------------------------- | -------------------------- |
 | `rice` (Rishi Kothari)       | `var`                      |
 | `const` (Yuto N.)            | `const`                    |
