@@ -1,4 +1,4 @@
-<!-- DO NOT REMOVE - contributor_list:data:start:["Matt-Gleich", "vincentdoerig"]:end -->
+<!-- DO NOT REMOVE - contributor_list:data:start:["Matt-Gleich", "aditya1rawat", "vincentdoerig"]:end -->
 # hacklang
 
 A programming language created for and by hackclubbers.
@@ -21,6 +21,8 @@ A programming language created for and by hackclubbers.
 
 
 - **[@Matt-Gleich](https://github.com/Matt-Gleich)**
+
+- **[@aditya1rawat](https://github.com/aditya1rawat)**
 
 - **[@vincentdoerig](https://github.com/vincentdoerig)**
 
