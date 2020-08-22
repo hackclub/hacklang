@@ -2,13 +2,13 @@
 
 A programming language created for and by hackclubbers. Basically javascript but the keywords are replaced with hackclubbers' names.
 
-| **hacklang keyword**                                               | **Javascript Equivalent** |
+| **hacklang keyword or operator**                                   | **JavaScript Equivalent** |
 | ------------------------------------------------------------------ | ------------------------- |
 | `rice` ([Rishi Kothari](https://github.com/rishiosaur))            | `var`                     |
 | `yuto` ([Yuto N.](https://github.com/starptr))                     | `const`                   |
 | `aditya` ([Aditya Rawat](https://github.com/aditya1rawat))         | `class`                   |
 | `c a r o t` ([Kevin Dai](https://github.com/TheOneKevin/))         | `throw`                   |
-| `gleich` ([Matt Gleich](https://github.com/Matt-Gleich))           | `for`                     |
+| `gleich` ([Matt Gleich](https://github.com/Matt-Gleich))           | `=`                       |
 | `ken` ([Ken Bro Mueller](https://github.com/kenmueller))           | `this`                    |
 | `winston` ([Winston Iskandar](https://github.com/winstoniskandar)) | `if`                      |
 | `theo` ([Theo Bleier](https://github.com/tmb))                     | `while`                   |
