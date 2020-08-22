@@ -1,6 +1,6 @@
 # hacklang
 
-A programming language created for and by hackclubbers.
+A programming language created for and by hackclubbers. Basically javascript but the keywords are replaced with hackclubbers' names.
 
 | **hacklang keyword**                                               | **Javascript Equivalent** |
 | ------------------------------------------------------------------ | ------------------------- |
