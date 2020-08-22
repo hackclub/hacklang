@@ -5,7 +5,7 @@ A programming language created for and by hackclubbers.
 | **hacklang keyword**         | **Javascript Equivalent ** |
 | ---------------------------- | -------------------------- |
 | `rice` (Rishi Kothari)       | `var`                      |
-| `const` (Yuto N.)            | `const`                    |
+| `yuto` (Yuto N.)             | `const`                    |
 | `aditya` (Aditya Rawat)      | `class`                    |
 | `c a r o t` (Kevin Dai)      | `=`                        |
 | `gleich` (Matt Gleich)       | `for`                      |
