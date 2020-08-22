@@ -14,3 +14,4 @@ A programming language created for and by hackclubbers.
 | `theo` (Theo Bleier)         | `print`                    |
 | `zrl` (Zach Latta)           | `constructor`              |
 | `josh` (Josh Brown)          | `import`                   |
+| `vincent` (Vincent Doerig)   | `return`                   |
