@@ -16,7 +16,7 @@ A programming language created for and by hackclubbers. Basically javascript but
 | `josh` ([Josh Brown](https://github.com/jbis9051))                 | `import`                  |
 | `luke` ([Luke Carapezza](https://github.com/lukec11))              | `let`                     |
 | `vincent` ([Vincent Dörig](https://github.com/vincentdoerig))      | `return`                  |
-| `caleb` ([Caleb Denio](https://github.com/cjdenio))                | `null`                    |
+| `caleb` ([Caleb Denio](https://github.com/cjdenio))                | `new`                     |
 | `kayley` ([Kayley Seow](https://github.com/kayleyseow))            | `else`                    |
 | `breadduck` (Kate)                                                 | `await`                   |
 | `lachlanjc` ([Lachlan Campbell](https://github.com/lachlanjc))     | `async`                   |
