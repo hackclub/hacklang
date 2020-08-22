@@ -22,4 +22,4 @@ A programming language created for and by hackclubbers. Basically javascript but
 | `lachlanjc` ([Lachlan Campbell](https://github.com/lachlanjc))     | `async`                   |
 | `chalk` ([Isac Portillo](https://github.com/ChalkHuman))           | `export`                  |
 | `safin` ([Safin Singh](https://github.com/safinsingh))             | `case`                    |
-| `safin` ([Eleeza A.](https://github.com/E-Lee-Za))                 | `try`                     |
+| `eleeza` ([Eleeza A.](https://github.com/E-Lee-Za))                | `try`                     |
