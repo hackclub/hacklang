@@ -28,4 +28,5 @@ A programming language created for and by hackclubbers. Basically javascript but
 | `Taylor` ([Taylor Lee](https://github.com/taylorylee))             | `yield`                   |
 | `Ongzz` ([Ong Zhi Zheng](https://github.com/Fogeinator))           | `void`                    |
 | `sam` ([Sam Poder](https://github.com/sampoder))                   | `function`                |
+| `anthony` ([Anthony Kung](https://github.com/Anthonykung))         | `break`                   |
 | `sarthak` ([Sarthak](https://github.com/sarthaktexas))             | `catch`                   |
