@@ -29,3 +29,4 @@ A programming language created for and by hackclubbers. Basically javascript but
 | `Ongzz` ([Ong Zhi Zheng](https://github.com/Fogeinator))           | `void`                    |
 | `sam` ([Sam Poder](https://github.com/sampoder))                   | `function`                |
 | `sarthak` ([Sarthak](https://github.com/sarthaktexas))             | `catch`                   |
+| `sarthak` ([Hitesh](https://github.com/nindroz))                  | `null`                   |
