@@ -5,7 +5,6 @@
 | `break` |
 | `catch` |
 | `debugger` |
-| `default` |
 | `delete` |
 | `do` |
 | `extends` |

@@ -24,3 +24,4 @@ A programming language created for and by hackclubbers. Basically javascript but
 | `safin` ([Safin Singh](https://github.com/safinsingh))             | `case`                    |
 | `eleeza` ([Eleeza A.](https://github.com/E-Lee-Za))                | `try`                     |
 | `claire` ([Claire Wang](https://github.com/clairebookworm))        | `continue`                |
+| `neel` ([Neel Redkar](https://github.com/neelr))                   | `default`                 |
