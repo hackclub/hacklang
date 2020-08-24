@@ -31,4 +31,4 @@ A programming language created for and by hackclubbers. Basically javascript but
 | `anthony` ([Anthony Kung](https://github.com/Anthonykung))         | `break`                   |
 | `sarthak` ([Sarthak](https://github.com/sarthaktexas))             | `catch`                   |
 | `srsh` ([Saharsh Yeruva](https://github.com/saharshy29))           | `public`                  |
-| `amogh` ([Amogh Chaubey](https://github.com/qmogh))                | `null`                  |
+| `amogh` ([Amogh Chaubey](https://github.com/qmogh))                | `private`                  |
