@@ -150,7 +150,7 @@ export class Tokenizer {
     });
   }
 
-  handleSpecialChar() {
+  handleSpecialChar(): void {
     const lines = this.code.split("\n");
     const startChar = lines[this.line][this.char];
     const startLocation: Location = {
