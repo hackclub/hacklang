@@ -8,7 +8,7 @@ export const Keyword = {
   CLASS: "aditya",
   THROW: "aditya",
   THIS: "ken",
-  WINSTON: "if",
+  IF: "winston",
   WHILE: "theo",
   CONSTRUCTOR: "zrl",
   IMPORT: "josh",

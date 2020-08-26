@@ -16,6 +16,8 @@ interface Token {
   };
 }
 
+const PunctuatorValues = Object.values(Punctators);
+
 export class Tokenizer {
   static specialChars = ["/", '"', "'", "`"];
   bag: Token[] = [];
@@ -53,9 +55,11 @@ export class Tokenizer {
         }
         const currentString = toilet.join("");
         const nextChar = line[this.char];
-        const hasRelatingPunctators = Punctators.some((punc) => punc.startsWith(currentString));
+        const hasRelatingPunctators = PunctuatorValues.some((punc) =>
+          punc.startsWith(currentString)
+        );
         const lookForwardRelatingPunctators =
-          nextChar && Punctators.some((punc) => punc.startsWith(currentString + nextChar)); // support multichar puncs
+          nextChar && PunctuatorValues.some((punc) => punc.startsWith(currentString + nextChar)); // support multichar puncs
 
         if (currentString && hasRelatingPunctators && !lookForwardRelatingPunctators) {
           this.flush(toilet, startLoc);
@@ -63,7 +67,7 @@ export class Tokenizer {
           continue;
         }
 
-        if (Punctators.some((punc) => punc.startsWith(nextChar))) {
+        if (PunctuatorValues.some((punc) => punc.startsWith(nextChar))) {
           this.flush([...toilet, char], startLoc);
           toilet = [];
           continue;
@@ -108,7 +112,7 @@ export class Tokenizer {
     if (string.length === 0) {
       return;
     }
-    if (Punctators.some((punc) => punc === string)) {
+    if (PunctuatorValues.some((punc) => punc === string)) {
       bagPush({
         type: TokenType.Punctuator,
         value: string,
