@@ -1,7 +1,9 @@
-export const Punctators = {
+export const JavaScriptPunctuator = {
   // Other
   COLON: ":",
   COMMA: ",",
+  PERIOD: ".",
+  SEMI_COLON: ";",
 
   // Grouping
   OPEN_BRAC: "[",
@@ -65,4 +67,11 @@ export const Punctators = {
   LOGICAL_OR_ASSIGNMENT: "||=",
   LOGICAL_AND_ASSIGNMENT: "&&=",
   LOGICAL_NULLISH_ASSIGNMENT: "??=",
+};
+
+export const HackLangPunctuator: typeof JavaScriptPunctuator = {
+  ...JavaScriptPunctuator,
+  ASSIGNMENT: "gleich",
+  EQUAL: "gleichgleich",
+  STRICT_EQUAL: "gleichgleichgleich",
 };

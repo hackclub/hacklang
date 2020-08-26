@@ -9,4 +9,6 @@ export enum TokenType {
   StringLiteral = "StringLiteral",
   RegularExpression = "RegularExpression",
   Template = "Template",
+
+  WHITESPACE = "Whitespace",
 }

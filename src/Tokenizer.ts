@@ -1,22 +1,9 @@
-import { Keyword } from "../Keyword";
-import { TokenType } from "./enum/TokenType";
-import { Punctators } from "./Punctuator";
+import { HackLangKeyword } from "./grammer/Keyword";
+import { HackLangPunctuator } from "./grammer/Punctuator";
+import { Location, Token } from "./grammer/Token";
+import { TokenType } from "./grammer/TokenType";
 
-interface Location {
-  line: number;
-  column: number;
-}
-
-interface Token {
-  type: TokenType;
-  value: string;
-  loc?: {
-    start: Location;
-    end: Location;
-  };
-}
-
-const PunctuatorValues = Object.values(Punctators);
+const PunctuatorValues = Object.values(HackLangPunctuator);
 
 export class Tokenizer {
   static specialChars = ["/", '"', "'", "`"];
@@ -45,33 +32,67 @@ export class Tokenizer {
         const char = line[this.char];
         this.char++;
         this.codeChar++;
+
+        const nextChar = line[this.char];
+        const currentString = toilet.join("");
+
         if (char.match(/\s/)) {
-          if (toilet.length === 0) {
-            continue;
+          if (currentString.length === 0 || currentString.match(/^\s+$/)) {
+            toilet.push(char);
           }
+          if (!nextChar.match(/\s/)) {
+            this.flush(toilet, startLoc);
+            if (!currentString.match(/^\s+$/)) {
+              toilet = [char];
+            } else {
+              toilet = [];
+            }
+          }
+          continue;
+        }
+
+        if (currentString.match(/^\s+$/)) {
           this.flush(toilet, startLoc);
+          toilet = [];
+        }
+
+        if (
+          nextChar &&
+          !nextChar.match(/\d|\w/) &&
+          PunctuatorValues.some((punc) => punc.startsWith(nextChar))
+        ) {
+          this.flush([...toilet, char], startLoc);
           toilet = [];
           continue;
         }
-        const currentString = toilet.join("");
-        const nextChar = line[this.char];
-        const hasRelatingPunctators = PunctuatorValues.some((punc) =>
-          punc.startsWith(currentString)
-        );
-        const lookForwardRelatingPunctators =
-          nextChar && PunctuatorValues.some((punc) => punc.startsWith(currentString + nextChar)); // support multichar puncs
 
-        if (currentString && hasRelatingPunctators && !lookForwardRelatingPunctators) {
+        if (
+          PunctuatorValues.some((punc) => punc === currentString) &&
+          !PunctuatorValues.some((punc) => punc.startsWith(currentString + char))
+        ) {
           this.flush(toilet, startLoc);
           toilet = [char];
           continue;
         }
 
-        if (PunctuatorValues.some((punc) => punc.startsWith(nextChar))) {
+        /*const hasRelatingPunctators =
+          currentString && PunctuatorValues.some((punc) => punc.startsWith(currentString));
+
+        const lookForwardRelatingPunctators =
+          nextChar &&
+          PunctuatorValues.some((punc) => punc.startsWith(currentString + char + nextChar)); // support multichar puncs
+
+        if (hasRelatingPunctators && !lookForwardRelatingPunctators) {
+          this.flush(toilet, startLoc);
+          toilet = [char];
+          continue;
+        }
+
+        if (!hasRelatingPunctators && PunctuatorValues.some((punc) => punc.startsWith(nextChar))) {
           this.flush([...toilet, char], startLoc);
           toilet = [];
           continue;
-        }
+        }*/
 
         if (Tokenizer.specialChars.includes(char)) {
           this.flush(toilet, startLoc);
@@ -83,21 +104,34 @@ export class Tokenizer {
           this.codeChar++;
           continue;
         }
+
         toilet.push(char);
       }
       if (toilet.length > 0) {
         this.flush(toilet, startLoc);
         toilet = [];
       }
+      this.bag.push({
+        type: TokenType.WHITESPACE,
+        value: "\n",
+        loc: {
+          start: { ...startLoc },
+          end: {
+            line: this.line,
+            column: this.char + 1,
+          },
+        },
+      });
       this.line++;
       this.codeChar++;
     }
   }
 
   flush(buffer: string[], startLocation: Location): void {
-    const bagPush = (token: { type: TokenType; value: string }) => {
+    const bagPush = (type: TokenType) => {
       this.bag.push({
-        ...token,
+        type,
+        value: string,
         loc: {
           start: { ...startLocation },
           end: {
@@ -112,46 +146,33 @@ export class Tokenizer {
     if (string.length === 0) {
       return;
     }
+    if (string.match(/^\s+$/)) {
+      //                       ^^ all whitespace
+      bagPush(TokenType.WHITESPACE);
+      return;
+    }
     if (PunctuatorValues.some((punc) => punc === string)) {
-      bagPush({
-        type: TokenType.Punctuator,
-        value: string,
-      });
+      bagPush(TokenType.Punctuator);
       return;
     }
-    if (Object.keys(Keyword).includes(string)) {
-      bagPush({
-        type: TokenType.Keyword,
-        value: string,
-      });
+    if ([HackLangKeyword.TRUE, HackLangKeyword.FALSE].includes(string)) {
+      bagPush(TokenType.BooleanLiteral);
       return;
     }
-    if (["true", "false"].includes(string)) {
-      bagPush({
-        type: TokenType.BooleanLiteral,
-        value: string,
-      });
+    if (string === HackLangKeyword.NULL) {
+      bagPush(TokenType.NullLiteral);
       return;
     }
-    if (string === "null") {
-      bagPush({
-        type: TokenType.NullLiteral,
-        value: string,
-      });
+    if (Object.values(HackLangKeyword).includes(string)) {
+      bagPush(TokenType.Keyword);
       return;
     }
     if (string.match(/\d+/)) {
-      bagPush({
-        type: TokenType.NumericLiteral,
-        value: string,
-      });
+      bagPush(TokenType.NumericLiteral);
       return;
     }
     // TODO invalid identifier (must be alphanumeric and start with letter)
-    bagPush({
-      type: TokenType.Identifier,
-      value: string,
-    });
+    bagPush(TokenType.Identifier);
   }
 
   handleSpecialChar(): void {
