@@ -75,25 +75,6 @@ export class Tokenizer {
           continue;
         }
 
-        /*const hasRelatingPunctators =
-          currentString && PunctuatorValues.some((punc) => punc.startsWith(currentString));
-
-        const lookForwardRelatingPunctators =
-          nextChar &&
-          PunctuatorValues.some((punc) => punc.startsWith(currentString + char + nextChar)); // support multichar puncs
-
-        if (hasRelatingPunctators && !lookForwardRelatingPunctators) {
-          this.flush(toilet, startLoc);
-          toilet = [char];
-          continue;
-        }
-
-        if (!hasRelatingPunctators && PunctuatorValues.some((punc) => punc.startsWith(nextChar))) {
-          this.flush([...toilet, char], startLoc);
-          toilet = [];
-          continue;
-        }*/
-
         if (Tokenizer.specialChars.includes(char)) {
           this.flush(toilet, startLoc);
           toilet = [];
@@ -227,7 +208,7 @@ export class Tokenizer {
       case "'":
         bagPush(TokenType.StringLiteral);
         break;
-      case "/":
+      case "/": // TODO support comments
         bagPush(TokenType.RegularExpression);
         break;
       case "`":
