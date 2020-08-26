@@ -7,13 +7,15 @@
   "scripts": {
     "prettier": "prettier -c --write \"**/*.{js,jsx,ts,tsx}\"",
     "lint": "eslint . --ext .ts",
-    "build": "tsc"
+    "build": "tsc",
+    "test": "ts-node ./src/test/test.ts"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^3.10.1",
     "@typescript-eslint/parser": "^3.10.1",
     "eslint": "^7.7.0",
-    "prettier": "^2.1.0"
+    "prettier": "^2.1.0",
+    "ts-node": "^9.0.0"
   },
   "dependencies": {
     "typescript": "^4.0.2"
