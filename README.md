@@ -2,6 +2,9 @@
 
 A programming language created for and by hackclubbers. Basically javascript but the keywords are replaced with hackclubbers' names.
 
+To contribute, please check out [CONTRIBUTING.md](https://github.com/hackclub/hacklang/blob/master/CONTRIBUTING.md)
+Want a keyword? Apply [here](https://airtable.com/shr69zRPjSpmrLdmh)
+
 | **hacklang keyword or operator**                                   | **JavaScript Equivalent** |
 | ------------------------------------------------------------------ | ------------------------- |
 | `rice` ([Rishi Kothari](https://github.com/rishiosaur))            | `var`                     |
