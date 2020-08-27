@@ -32,4 +32,5 @@ A programming language created for and by hackclubbers. Basically javascript but
 | `sarthak` ([Sarthak](https://github.com/sarthaktexas))             | `catch`                   |
 | `srsh` ([Saharsh Yeruva](https://github.com/saharshy29))           | `public`                  |
 | `amogh` ([Amogh Chaubey](https://github.com/qmogh))                | `private`                 |
+| `steggy` ([Steggy](https://github.com/rfblock))                    | `debugger`                |
 | `jacob` ([Jacob Haap](https://github.com/jacobhaap))               | `static`                  |
