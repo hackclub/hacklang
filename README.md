@@ -34,3 +34,4 @@ A programming language created for and by hackclubbers. Basically javascript but
 | `amogh` ([Amogh Chaubey](https://github.com/qmogh))                | `private`                 |
 | `steggy` ([Steggy](https://github.com/rfblock))                    | `debugger`                |
 | `jacob` ([Jacob Haap](https://github.com/jacobhaap))               | `static`                  |
+| `kofler` ([Edwin Kofler](https://github.com/eankeen))              | `from`                    |
