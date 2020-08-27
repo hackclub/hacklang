@@ -1,3 +1,5 @@
+export type Punctuator = typeof JavaScriptPunctuator;
+
 export const JavaScriptPunctuator = {
   // Other
   COLON: ":",

@@ -1,9 +1,9 @@
-import { HackLangKeyword } from "./grammer/Keyword";
-import { HackLangPunctuator } from "./grammer/Punctuator";
+import { ErrorHandler } from "./ErrorHandler";
+import { HackLangKeyword, JavaScriptKeyword, Keyword } from "./grammer/Keyword";
+import { Language } from "./grammer/Language";
+import { HackLangPunctuator, JavaScriptPunctuator, Punctuator } from "./grammer/Punctuator";
 import { Location, Token } from "./grammer/Token";
 import { TokenType } from "./grammer/TokenType";
-
-const PunctuatorValues = Object.values(HackLangPunctuator);
 
 export class Tokenizer {
   static specialChars = ["/", '"', "'", "`"];
@@ -12,13 +12,32 @@ export class Tokenizer {
   char = 0;
   codeChar = 0;
   code: string;
+  errorHandler: ErrorHandler;
+  punctuator: {
+    from: Punctuator;
+    to: Punctuator;
+  };
+  keyword: {
+    from: Keyword;
+    to: Keyword;
+  };
 
-  constructor(code: string) {
+  constructor(code: string, errorHandler: ErrorHandler, language: Language) {
     this.code = code;
+    this.errorHandler = errorHandler;
+    this.punctuator = {
+      from: language === Language.JAVASCRIPT ? JavaScriptPunctuator : HackLangPunctuator,
+      to: language === Language.JAVASCRIPT ? HackLangPunctuator : JavaScriptPunctuator,
+    };
+    this.keyword = {
+      from: language === Language.JAVASCRIPT ? JavaScriptKeyword : HackLangKeyword,
+      to: language === Language.JAVASCRIPT ? HackLangKeyword : JavaScriptKeyword,
+    };
   }
 
   tokenize(): void {
     const lines = this.code.split("\n");
+    const punctuatorValues = Object.values(this.punctuator.from);
     while (this.line < lines.length) {
       const line = lines[this.line];
       let toilet: string[] = []; // (buffer)
@@ -59,7 +78,7 @@ export class Tokenizer {
         if (
           nextChar &&
           !nextChar.match(/\d|\w/) &&
-          PunctuatorValues.some((punc) => punc.startsWith(nextChar))
+          punctuatorValues.some((punc) => punc.startsWith(nextChar))
         ) {
           this.flush([...toilet, char], startLoc);
           toilet = [];
@@ -67,8 +86,8 @@ export class Tokenizer {
         }
 
         if (
-          PunctuatorValues.some((punc) => punc === currentString) &&
-          !PunctuatorValues.some((punc) => punc.startsWith(currentString + char))
+          punctuatorValues.some((punc) => punc === currentString) &&
+          !punctuatorValues.some((punc) => punc.startsWith(currentString + char))
         ) {
           this.flush(toilet, startLoc);
           toilet = [char];
@@ -109,6 +128,7 @@ export class Tokenizer {
   }
 
   flush(buffer: string[], startLocation: Location): void {
+    const punctuatorValues = Object.values(this.punctuator.from);
     const bagPush = (type: TokenType) => {
       this.bag.push({
         type,
@@ -121,6 +141,7 @@ export class Tokenizer {
           },
         },
       });
+      startLocation.column = this.char;
     };
 
     const string = buffer.join("");
@@ -132,27 +153,29 @@ export class Tokenizer {
       bagPush(TokenType.WHITESPACE);
       return;
     }
-    if (PunctuatorValues.some((punc) => punc === string)) {
+    if (punctuatorValues.some((punc) => punc === string)) {
       bagPush(TokenType.Punctuator);
       return;
     }
-    if ([HackLangKeyword.TRUE, HackLangKeyword.FALSE].includes(string)) {
+    if ([this.keyword.from.TRUE, this.keyword.from.FALSE].includes(string)) {
       bagPush(TokenType.BooleanLiteral);
       return;
     }
-    if (string === HackLangKeyword.NULL) {
+    if (string === this.keyword.from.NULL) {
       bagPush(TokenType.NullLiteral);
       return;
     }
-    if (Object.values(HackLangKeyword).includes(string)) {
+    if (Object.values(this.keyword.from).includes(string)) {
       bagPush(TokenType.Keyword);
       return;
     }
-    if (string.match(/\d+/)) {
+    if (string.match(/^\d+$/)) {
       bagPush(TokenType.NumericLiteral);
       return;
     }
-    // TODO invalid identifier (must be alphanumeric and start with letter)
+    if (!string.match(/^[A-Za-z]+\w*$/)) {
+      this.errorHandler.createError("Invalid Identifier: " + string, startLocation);
+    }
     bagPush(TokenType.Identifier);
   }
 
@@ -179,10 +202,10 @@ export class Tokenizer {
       this.codeChar++;
       if (this.char > line.length) {
         if (startChar !== "`") {
-          // TODO error here, only ` supports multiline
+          this.errorHandler.createError("Unexpected end of line", startLocation);
         }
         if (this.line + 1 > lines.length) {
-          // TODO error here, unexpected EOF
+          this.errorHandler.createError("Unexpected end of file", startLocation);
         }
         this.char = 0;
         this.line++;
@@ -201,6 +224,7 @@ export class Tokenizer {
           },
         },
       });
+      startLocation.column = this.char;
     };
 
     switch (startChar) {
@@ -215,7 +239,7 @@ export class Tokenizer {
         bagPush(TokenType.Template);
         break;
       default:
-      // TODO uh oh spaghettio
+        this.errorHandler.createError("Unexpected character: " + startChar, startLocation);
     }
   }
 }

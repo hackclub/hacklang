@@ -1,6 +1,9 @@
 /*
 Most langs will hard code their keywords but I wanted to make it easy to change the keywords so I did it like this. The keys represent the JavaScript semantic equivalent.
 */
+
+export type Keyword = typeof JavaScriptKeyword;
+
 export const JavaScriptKeyword = {
   AWAIT: "await",
   BREAK: "break",
