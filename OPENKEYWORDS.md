@@ -11,6 +11,7 @@
 | `finally` |
 | `function` |
 | `in` |
+| `int` |
 | `instanceof`|
 | `super` |
 | `switch` |
