@@ -1,0 +1,22 @@
+{
+  "name": "hacklang-loader",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Edwin Kofler <24364012+eankeen@users.noreply.github.com> (https://edwinkofler.com/)",
+  "license": "MIT",
+  "dependencies": {
+    "loader-utils": "^2.0.0",
+    "schema-utils": "^2.7.0"
+  },
+  "peerDependencies": {
+    "webpack": "^4.0.0 || ^5.0.0"
+  }
+}

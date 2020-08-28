@@ -1,23 +1,27 @@
 {
-  "name": "hacklang",
-  "version": "1.0.0",
-  "description": "Hackahackalangolango",
-  "license": "MIT",
-  "keywords": [],
+  "name": "hacklang-meta",
+  "priavte": true,
+  "version": "0.1.0",
+  "description": "A programming language created for and by hackclubbers. Basically javascript but the keywords are replaced with hackclubbers' names.",
+  "main": "index.js",
+  "workspaces": [
+    ""
+  ],
+  "directories": {
+    "example": "example"
+  },
   "scripts": {
-    "prettier": "prettier -c --write \"**/*.{js,jsx,ts,tsx}\"",
-    "lint": "eslint . --ext .ts",
-    "build": "tsc",
-    "test": "ts-node ./src/test/test.ts"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^3.10.1",
-    "@typescript-eslint/parser": "^3.10.1",
-    "eslint": "^7.7.0",
-    "prettier": "^2.1.0",
-    "ts-node": "^9.0.0"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hackclub/hacklang.git"
   },
-  "dependencies": {
-    "typescript": "^4.0.2"
-  }
+  "keywords": [],
+  "author": "Edwin Kofler <24364012+eankeen@users.noreply.github.com> (https://edwinkofler.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hackclub/hacklang/issues"
+  },
+  "homepage": "https://github.com/hackclub/hacklang#readme"
 }
