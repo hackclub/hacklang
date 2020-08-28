@@ -1,6 +1,7 @@
 {
   "name": "hacklang",
   "version": "1.0.0",
+  "main": "build",
   "description": "Hackahackalangolango",
   "license": "MIT",
   "keywords": [],

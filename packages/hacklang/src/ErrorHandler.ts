@@ -13,6 +13,6 @@ export class ErrorHandler {
     console.error(padding + this.lines[location.line]);
     console.error(padding + " ".repeat(location.column) + "^");
     console.error("Error: " + message);
-    process.exit(1);
+    process.exitCode = 1
   }
 }

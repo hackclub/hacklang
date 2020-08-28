@@ -2,12 +2,12 @@
   "name": "hacklang-loader",
   "version": "0.1.0",
   "description": "",
-  "main": "index.js",
+  "main": "lib",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "license": "MIT",
   "dependencies": {
@@ -15,6 +15,16 @@
     "schema-utils": "^2.7.0"
   },
   "peerDependencies": {
+    "hacklang": "^1.0.0 || ^2.0.0",
     "webpack": "^4.0.0 || ^5.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.10",
+    "@types/webpack": "^4.41.21",
+    "hacklang": "workspace:^1.0.0",
+    "jest": "^26.4.2",
+    "memfs": "^3.2.0",
+    "unionfs": "^4.4.0",
+    "webpack": "^4.44.1"
   }
 }
