@@ -1,7 +1,4 @@
-import { ErrorHandler } from "../ErrorHandler";
-import { Language } from "../grammer/Language";
-import { Parser } from "../Parser";
-import { Tokenizer } from "../Tokenizer";
+import { compile } from "../api";
 
 const testString = `
 function main(){
@@ -15,9 +12,6 @@ const x = {
 };
 `;
 
-const tokey = new Tokenizer(testString, new ErrorHandler(testString), Language.JAVASCRIPT);
-tokey.tokenize();
-console.log(JSON.stringify(tokey.bag, undefined, 2));
-const parsey = new Parser(tokey.bag, Language.JAVASCRIPT);
-parsey.parse();
-console.log(parsey.output);
+const result = compile(testString);
+console.info(result.ast);
+console.info(result.code);
