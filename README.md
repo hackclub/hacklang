@@ -38,3 +38,4 @@ Want a keyword? Apply [here](https://airtable.com/shr69zRPjSpmrLdmh)
 | `steggy` ([Steggy](https://github.com/rfblock))                    | `debugger`                |
 | `jacob` ([Jacob Haap](https://github.com/jacobhaap))               | `static`                  |
 | `kofler` ([Edwin Kofler](https://github.com/eankeen))              | `from`                    |
+| `fayd` ([Faisal Sayed](https://github.com/faisalsayed10))          | `as`                      |
