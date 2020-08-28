@@ -28,8 +28,8 @@ Want a keyword? Apply [here](https://airtable.com/shr69zRPjSpmrLdmh)
 | `eleeza` ([Eleeza A.](https://github.com/E-Lee-Za))                | `try`                     |
 | `claire` ([Claire Wang](https://github.com/clairebookworm))        | `continue`                |
 | `neel` ([Neel Redkar](https://github.com/neelr))                   | `default`                 |
-| `Taylor` ([Taylor Lee](https://github.com/taylorylee))             | `yield`                   |
-| `Ongzz` ([Ong Zhi Zheng](https://github.com/Fogeinator))           | `void`                    |
+| `taylor` ([Taylor Lee](https://github.com/taylorylee))             | `yield`                   |
+| `ongzz` ([Ong Zhi Zheng](https://github.com/Fogeinator))           | `void`                    |
 | `sam` ([Sam Poder](https://github.com/sampoder))                   | `function`                |
 | `anthony` ([Anthony Kung](https://github.com/Anthonykung))         | `break`                   |
 | `sarthak` ([Sarthak](https://github.com/sarthaktexas))             | `catch`                   |
