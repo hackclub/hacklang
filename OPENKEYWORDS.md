@@ -12,7 +12,6 @@
 | `function` |
 | `in` |
 | `instanceof`|
-| `super` |
 | `switch` |
 | `try` |
 | `typeof` |
