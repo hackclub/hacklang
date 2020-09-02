@@ -10,12 +10,8 @@
     "isolatedModules": true,
     "noImplicitAny": true,
     "skipLibCheck": true,
-    "declaration": true
-  },
-  "include": [
-    "src/**/*"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+    "declaration": true,
+    "allowJs": true,
+    "checkJs": true
+  }
 }

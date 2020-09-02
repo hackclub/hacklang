@@ -1,0 +1,10 @@
+{
+  "type": "object",
+  "properties": {
+    "dummy": {
+      "description": "This is description of dummy",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}
