@@ -21,7 +21,7 @@ Want a keyword? Apply [here](https://airtable.com/shr69zRPjSpmrLdmh)
 | `vincent` ([Vincent Dörig](https://github.com/vincentdoerig))      | `return`                  |
 | `caleb` ([Caleb Denio](https://github.com/cjdenio))                | `new`                     |
 | `kayley` ([Kayley Seow](https://github.com/kayleyseow))            | `else`                    |
-| `breadduck` (Kate)                                                 | `await`                   |
+| `breadduck` ([Kate](https://github.com/KTMIZE))                    | `await`                   |
 | `lachlanjc` ([Lachlan Campbell](https://github.com/lachlanjc))     | `async`                   |
 | `chalk` ([Isac Portillo](https://github.com/ChalkHuman))           | `export`                  |
 | `safin` ([Safin Singh](https://github.com/safinsingh))             | `case`                    |
