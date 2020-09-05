@@ -40,3 +40,4 @@ Want a keyword? Apply [here](https://airtable.com/shr69zRPjSpmrLdmh)
 | `kofler` ([Edwin Kofler](https://github.com/eankeen))              | `from`                    |
 | `fayd` ([Faisal Sayed](https://github.com/faisalsayed10))          | `as`                      |
 | `aaryan` ([Aaryan Porwal](https://github.com/aaryanporwal))        | `super`                   |
+| `gopal`([Gopal Kataria](https://github.com/Gopalkataria))          | `typeof`                  |
