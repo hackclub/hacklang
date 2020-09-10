@@ -5,7 +5,6 @@
 | `delete` |
 | `do` |
 | `extends` |
-| `finally` |
 | `in` |
 | `instanceof`|
 | `switch` |
