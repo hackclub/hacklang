@@ -9,3 +9,4 @@
 | `instanceof`|
 | `switch` |
 | `with` |
+| `for` |
