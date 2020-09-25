@@ -10,3 +10,7 @@
 | `switch` |
 | `with` |
 | `for` |
+| `implements` |
+| `interface` |
+| `package` |
+| `private` |
