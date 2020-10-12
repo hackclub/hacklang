@@ -42,3 +42,5 @@ Want a keyword? Apply [here](https://airtable.com/shr69zRPjSpmrLdmh)
 | `aaryan` ([Aaryan Porwal](https://github.com/aaryanporwal))        | `super`                   |
 | `gopal`([Gopal Kataria](https://github.com/Gopalkataria))          | `typeof`                  |
 | `ben`([Ben Aubin](https://github.com/benaubin))                    | `finally`                 |
+| `yash`([Yash Karthik](https://github.com/YashKarthik))             | `delete`                  |
+| `rohan`([Rohan Bansal](https://github.com/rohan-bansal))           | `for`                     |
