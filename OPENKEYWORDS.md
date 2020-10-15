@@ -6,5 +6,4 @@
 | `extends` |
 | `in` |
 | `instanceof`|
-| `switch` |
 | `with` |
