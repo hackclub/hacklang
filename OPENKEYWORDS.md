@@ -6,4 +6,3 @@
 | `extends` |
 | `in` |
 | `instanceof`|
-| `with` |

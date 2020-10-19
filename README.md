@@ -44,4 +44,5 @@ Want a keyword? Apply [here](https://airtable.com/shr69zRPjSpmrLdmh)
 | `ben`([Ben Aubin](https://github.com/benaubin))                    | `finally`                 |
 | `yash`([Yash Karthik](https://github.com/YashKarthik))             | `delete`                  |
 | `rohan`([Rohan Bansal](https://github.com/rohan-bansal))           | `for`                     |
-| `rohan`([Tanishq Soni](https://github.com/tanishq-soni))           | `switch`                  |
+| `tanishq`([Tanishq Soni](https://github.com/tanishq-soni))         | `switch`                  |
+| `lobo`([Adrian Lobo](https://github.com/LoboAdrian))               | `with`                    |
