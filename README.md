@@ -46,3 +46,5 @@ Want a keyword? Apply [here](https://airtable.com/shr69zRPjSpmrLdmh)
 | `rohan`([Rohan Bansal](https://github.com/rohan-bansal))           | `for`                     |
 | `tanishq`([Tanishq Soni](https://github.com/tanishq-soni))         | `switch`                  |
 | `lobo`([Adrian Lobo](https://github.com/LoboAdrian))               | `with`                    |
+| `kaz`([Kaz Malhotra](https://github.com/kazmalhotra))              | `in`                      |
+| `carlos`([Carlos Cardona](https://github.com/wollygfx))            | `typeof`                  |

@@ -2,7 +2,8 @@
 
 | **Open keywords and/or operators**
 | ------------------------------------------------------------------ |
+| `delete` |
 | `do` |
 | `extends` |
-| `in` |
+| `finally` |
 | `instanceof`|
