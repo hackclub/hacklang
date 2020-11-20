@@ -7,6 +7,7 @@ Want a keyword? Apply [here](https://airtable.com/shr69zRPjSpmrLdmh)
 
 | **hacklang keyword or operator**                                   | **JavaScript Equivalent** |
 | ------------------------------------------------------------------ | ------------------------- |
+| `ali a saleh` ([Ali A. Saleh](https://github.com/alialiwa2005))    | `in`                      |
 | `rice` ([Rishi Kothari](https://github.com/rishiosaur))            | `var`                     |
 | `yuto` ([Yuto N.](https://github.com/starptr))                     | `const`                   |
 | `aditya` ([Aditya Rawat](https://github.com/aditya1rawat))         | `class`                   |
