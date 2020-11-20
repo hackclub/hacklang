@@ -2,6 +2,7 @@
 
 | **Open keywords and/or operators**
 | ------------------------------------------------------------------ |
+| `protected` |
 | `delete` |
 | `do` |
 | `extends` |
