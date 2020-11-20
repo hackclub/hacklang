@@ -6,7 +6,6 @@
 | `do` |
 | `extends` |
 | `finally` |
-| `in` |
 | `instanceof`|
 | `switch` |
 | `try` |
