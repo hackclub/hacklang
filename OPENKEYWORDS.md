@@ -9,6 +9,5 @@
 | `in` |
 | `instanceof`|
 | `switch` |
-| `try` |
 | `typeof` |
 | `with` |
